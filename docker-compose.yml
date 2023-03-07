@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    sqlserver:
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        environment:
+            - ACCEPT_EULA=Y
+            - SA_PASSWORD=p@sswordSA
+        volumes:
+            - ./sqlserver:/app
+        command: bash /app/entrypoint.sh
+        networks:
+            - ubs
+        ports:
+            - 1433:1433
+
+networks:
+    ubs:
+        driver: bridge
