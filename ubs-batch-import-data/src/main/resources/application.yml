@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;DatabaseName=UBS;UseUnicode=true;characterEncoding=utf8;encrypt=false;
+    username: SA
+    password: p@sswordSA
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  liquibase:
+    enabled: false
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      isolation-level-for-create: default
