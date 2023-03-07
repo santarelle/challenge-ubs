@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="changelog-001_create-table-stock.xml" author="Marco Jardim" context="ddl">
+        <comment>
+            Create table STOCK
+        </comment>
+        <createTable tableName="STOCK">
+            <column name="ID" autoIncrement="true" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_STOCK"/>
+            </column>
+            <column name="PRODUCT_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRODUCT_TYPE" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="QUANTITY" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRICE" type="NUMERIC(7,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VOLUME" type="NUMERIC(7,2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INDUSTRY" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ORIGIN" type="VARCHAR(2)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

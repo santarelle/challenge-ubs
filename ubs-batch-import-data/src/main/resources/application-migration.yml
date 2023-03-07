@@ -1,0 +1,8 @@
+spring:
+  liquibase:
+    enabled: true
+    contexts: ddl
+    change-log: classpath:database/changelog-master-ddl.xml
+  batch:
+    job:
+      enabled: false
